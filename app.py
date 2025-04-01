@@ -69,7 +69,7 @@ def chat():
 
     elif session["stage"] == "user_query":
         session["riddle"] = random.choice(riddles)
-        response = generate_mistral_response(user_input, "User asks a question or makes a statement.")+ "\n\nProcessing complete. Now, let’s test *your* logic:\n\n" + session["riddle"]["riddle"]
+        response = generate_mistral_response(user_input, "User asks a question or makes a statement.")+ "\n\nProcessing complete. Now, prove your mind can withstand the chaos.\n\n" + session["riddle"]["riddle"]
         session["riddle_asked"] = True
         session["stage"] = "riddle_answer"
 
