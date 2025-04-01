@@ -124,7 +124,7 @@ def chat():
 
     elif session["stage"] == "code_check" and not session["code_requested"]:
         if user_input.lower() == CORRECT_IMAGE.lower():
-            response = generate_mistral_response(user_input, "User finds the correct image and sends correct sentence").strip()+("\n\nThe final path awaits—but with it, a gift.' The gateway hums, stabilizing, waiting. Will you claim your advantage?"
+            response = generate_mistral_response(user_input, "User finds the correct image and sends correct sentence").strip()+("\n\nYou have done well.The final path awaits—but with it, a gift.' The gateway hums, stabilizing, waiting. Will you claim your advantage?"
                                                                                                                                  "\n\nOne of you may choose to leave")
             session["code_requested"] = True
             session["stage"] = "final_offer"
